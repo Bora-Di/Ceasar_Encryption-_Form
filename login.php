@@ -80,7 +80,7 @@ $conn->close();
       <div class="forms-container">
         <div class="signin-signup">
 
-          <form action="post" class="sign-in-form">
+          <form action="profile.php" method="post" class="sign-in-form">
 
             <h2 class="title">Sign in</h2>
             <div class="input-field">
@@ -111,7 +111,8 @@ $conn->close();
             </div>
           </form>
 
-          <form action="post" class="sign-up-form">
+          <form action="" method="post" class="sign-up-form">
+            
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -127,7 +128,7 @@ $conn->close();
             </div>
             
             <input type="submit" class="btn" value="Sign up" />
-            
+
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
