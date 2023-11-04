@@ -6,7 +6,8 @@
     <title>User Profile</title>
     <style>
         body {
-       
+       width: auto;
+       height: auto;
             justify-content: space-between;
             display: flex;
             font-family: Arial, sans-serif;
