@@ -48,6 +48,6 @@ if ($login_successful) {
 header("Location: profile.php");
 exit;
 } else {
-echo "Invalid username or password";
+echo " ";
 }
 ?>

@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <style>
+        body {
+       
+            justify-content: space-between;
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(-50deg, #5b247a 10%, #1bcedf 85%);
+            text-align: left;
+        }
+
+        .profile-container {
+            background-color: #fff;
+            width: 100%;
+            margin: auto;
+            margin-right: 10%;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        img {
+            width: 40%;
+            height: auto;
+            margin-right: 10%;
+        }
+    </style>
 </head>
 <body>
-    <h1>User Profile</h1>
+<img src="img/profile.png" class="image" alt="" />
+    <div class="profile-container">
+        
 
+        <h1>User Profile</h1>
+
+    
     <?php
 require_once ('encrypt_function.php');
 require_once ('login.php');
@@ -53,5 +97,9 @@ require_once ('login.php');
         echo "You are not logged in. Please log in to view your profile.";
     }
     ?>
+    </div>
+    
+
 </body>
 </html>
+
