@@ -6,12 +6,12 @@
     <title>User Profile</title>
     <style>
         body {
-       width: auto;
-       height: auto;
+            width: auto;
+            height: auto;
             justify-content: space-between;
             display: flex;
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(-50deg, #5b247a 10%, #1bcedf 85%);
+            background-image: linear-gradient(90deg, #5b247a 50%, #1bcedf 100%);
             text-align: left;
         }
 
@@ -83,11 +83,14 @@ require_once ('login.php');
             $username = $row['username'];
             $email = $row['email'];
             $encryptedPassword = $row['encrypted_password'];
+            $decryptedPassword = caesarDecrypt($encryptedPassword, 5);
+
 
             // Display user data
             echo "<p>Username: $username</p>";
             echo "<p>Email: $email</p>";
             echo "<p>Encrypted Password: $encryptedPassword</p>";
+            echo "<p>Decrypted Password: $decryptedPassword</p>";
         } else {
             echo "User not found or an error occurred.";
         }
