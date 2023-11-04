@@ -1,6 +1,5 @@
 <?php 
   
-  
 function caesarEncrypt($plaintext, $shift) {
     $encryptedText = '';
     $textLength = strlen($plaintext);

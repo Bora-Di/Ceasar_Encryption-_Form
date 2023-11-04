@@ -2,6 +2,8 @@
 
 session_start(); 
  require_once('encrypt_function.php');
+
+ $register_successful = false;  // Initialize $login_successful as false
  
  // Database configuration
  $host = "localhost";
@@ -28,6 +30,7 @@ session_start();
      $sql = "INSERT INTO users (username, email, encrypted_password) VALUES ('$username', '$email', '$encryptedPassword')";
  
      if ($conn->query($sql) === true) {
+        $register_successful = true;
          // Store the logged-in username in a session variable
          $_SESSION['loggedInUsername'] = $username;
          echo "Registration successful";
@@ -38,5 +41,14 @@ session_start();
  
  // Close the database connection
  $conn->close();
+
+ 
+if ($register_successful) {
+    // Redirect to profile.php
+    header("Location: index.html");
+    exit;
+    } else {
+    echo "Register Failed";
+    }
  ?>
  
